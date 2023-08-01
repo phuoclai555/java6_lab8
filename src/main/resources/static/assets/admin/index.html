@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Java 6 Project</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <link href="/assets/css/shopping-cart-app.css" rel="stylesheet" />
+  </head>
+  <body class="container" ng-app="admin-app">
+    <header class="row">
+      <h1 class="alert alert-success">Website Administration</h1>
+    </header>
+    <div class="row">
+      <nav class="navbar navbar-inverse" style="font-variant: small-caps">
+        <div class="container-fluid">
+          <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="#!product">Prodcuts</a></li>
+            <li><a href="#!authorize">Authorizing</a></li>
+            <li><a href="/security/logoff">Sign Out</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <main>
+      <p ng-view></p>
+    </main>
+    <footer class="row text-center">
+      FPT Polytechnic &copy; 2023. All right reserved
+    </footer>
+    <script src="/assets/admin/admin-app.js"></script>
+    <script src="/assets/admin/product/product-ctrl.js"></script>
+    <script src="/assets/admin/authority/authority-ctrl.js"></script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="dynamic(main)"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java 6 Project</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link href="/assets/css/shopping-cart-app.css" rel="stylesheet" />
+</head>
+<body class="container" ng-app="shopping-cart-app" ng-controller="shopping-cart-ctrl">
+    <header class="row">
+        <h1 class="alert alert-success">FPT Polytechnic</h1>
+    </header>
+    <nav class="row">
+        <div th:replace="~{/layout/_menu.html}"></div>
+    </nav>
+    <div class="row">
+        <article class="col-sm-9">
+            <div th:replace="${main}"></div>
+        </article>
+        <aside class="col-sm-3">
+            <div th:replace="~{/layout/_cart-info.html}"></div>
+            <div th:replace="~{/layout/_category.html}"></div>
+        </aside>
+    </div>
+    <footer class="row text-center">FPT Polytechnic &copy; 2023. All right reserved </footer>
+    <script src="/assets/js/shopping-cart-app.js"></script>
+</body>
+</html>
